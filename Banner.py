@@ -107,9 +107,9 @@ for onechar in message:
         for invk in range(0, 9):
             k = 8 - invk
             j[9 - k] = 0
-            if (2 ** k) < su:
+            if (2**k) < su:
                 j[9 - k] = 1
-                su -= 2 ** k
+                su -= 2**k
                 if su == 1:
                     f[u] = 9 - k
                     break
