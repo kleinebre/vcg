@@ -2,8 +2,10 @@
 from numpy import exp
 from math import sqrt
 
+
 def zval(z):
     return 30 * exp(-z * z / 100)
+
 
 print((" " * 32) + "3D PLOT")
 print((" " * 20) + "Python version by Marc Brevoort")
