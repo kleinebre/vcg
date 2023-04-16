@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-print(" "*33 + "TRAIN")
-print(" "*15 + "CREATIVE COMPUTING  MORRISTOWN, NEW JERSEY")
+print(" " * 33 + "TRAIN")
+print(" " * 15 + "CREATIVE COMPUTING  MORRISTOWN, NEW JERSEY")
 print("\n\n")
 
 print("TIME - SPEED DISTANCE EXERCISE\n")
