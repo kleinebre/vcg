@@ -24,14 +24,14 @@ def title():
 
 def defensive_alignment():
     while True:
-        defense = int(input("YOUR NEW DEFENSIVE ALIGNMENT IS "))
-        if defense >= 6:
+        defense = float(input("YOUR NEW DEFENSIVE ALIGNMENT IS? "))
+        if defense >= 6.0:
             return defense
 
 
 def get_starting_defense():
     yourshot = 0
-    defense = int(input("YOUR STARTING DEFENSE WILL BE "))
+    defense = int(input("YOUR STARTING DEFENSE WILL BE? "))
     if defense < 6:
         defense = defensive_alignment()
         print()
