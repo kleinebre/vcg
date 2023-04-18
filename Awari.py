@@ -84,7 +84,7 @@ def have_empty_side(bowl):
     """
     for i in range(0, 6):
         if bowl[i]:
-            """ Player side not empty. check comp side """
+            """Player side not empty. check comp side"""
             for i in range(7, 13):
                 if bowl[i]:
                     return False
