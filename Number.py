@@ -1,4 +1,5 @@
 from random import random as rnd
+
 # A bit stupid game - ultimately you pretty much always win
 # by selecting the same number over and over again.
 def title():
@@ -16,19 +17,21 @@ def title():
     print("your point count.  You win when you get 500 points.")
     print("")
 
+
 def fnr():
-    return int(5*rnd()+1)
+    return int(5 * rnd() + 1)
+
 
 def main():
     title()
-    p=100.0
+    p = 100.0
     while True:
         g = input("Guess a number from 1 to 5: ")
-        r = fnr();
-        s = fnr();
-        t = fnr();
-        u = fnr();
-        v = fnr();
+        r = fnr()
+        s = fnr()
+        t = fnr()
+        u = fnr()
+        v = fnr()
         if g == r:
             p -= 5
         elif g == s:
@@ -39,7 +42,7 @@ def main():
         elif g == u:
             p += 1
         elif g == v:
-            p -= (p/2)
+            p -= p / 2
         elif g > 5:
             continue
         else:
@@ -50,5 +53,6 @@ def main():
             continue
         print("!!!!YOU WIN!!!! With {} points.".format(p))
         break
+
 
 main()
