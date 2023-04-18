@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from random import random as rnd
+
 # Original apparently by Danny Freidus
+
 
 def title():
     print((33 * " ") + "Number")
@@ -15,16 +17,17 @@ def title():
     print("a long time.  In particular, numbers over 5000.")
     print("(Haha, modern hardware go brrrrr... how about 10 million)")
 
+
 def main():
     while True:
         total_spots = [0 for x in range(12)]
         print("")
         x = input("How many rolls? ")
         for s in range(int(x)):
-            a = int(rnd()*6+1)
-            b = int(rnd()*6+1)
+            a = int(rnd() * 6 + 1)
+            b = int(rnd() * 6 + 1)
             r = a + b
-            total_spots[r-1] += 1
+            total_spots[r - 1] += 1
         print("")
         print("Total spots | Number of times")
         for v in range(1, 12):
@@ -35,6 +38,7 @@ def main():
         if z == "y":
             continue
         break
+
 
 title()
 main()
