@@ -169,7 +169,7 @@ class Quadrant:
         return name
 
     def set_content(self, sector_x, sector_y, new_content):
-        """ 
+        """
         INSERT IN STRING ARRAY FOR QUADRANT
         """
         if len(new_content) != 3:
@@ -232,10 +232,10 @@ class Starship:
 
     def fly_to(self, quadrant_x, quadrant_y, sector_x, sector_y):
         """
-        In the original code, quadrant indices were used both before 
+        In the original code, quadrant indices were used both before
         validating them, and after being validated as invalid.
-        So I have dropped the boundary validation altogether, since 
-        in practice, it apparently served no actual purpose.    
+        So I have dropped the boundary validation altogether, since
+        in practice, it apparently served no actual purpose.
         """
         klingons = 0
         starbases = 0
@@ -1248,7 +1248,7 @@ class Starship:
         """
         7530 REM CUM GALACTIC RECORD
         7540 REM INPUT "DO YOU WANT A HARDCOPY? IS THE TTY ON (Y/N)";A$
-        7542 REM IF A$="Y" THEN POKE1229,2:POKE1237,3:NULL1    
+        7542 REM IF A$="Y" THEN POKE1229,2:POKE1237,3:NULL1
         """
         uprint("")
         uprint(
