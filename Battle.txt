@@ -1,0 +1,23 @@
+Battle is a classic game of battleship.
+When porting this, I noticed that the vast majority of
+the program dealt with placing the ships on a field.
+Ships can be placed in four directions; horizontally, vertically,
+and two ways diagonally, which you could call "slash" and "backslash".
+
+Not only did each of these directions had its own subroutine to check board
+boundaries and availability of the fields, resulting in quite a bit of duplicated code;
+the way the subroutines worked was also inconsistent between straight and diagonal
+checks, and after a few evenings of porting work, the code still didn't work as expected.
+I tired of making bad code work, so I wrote the ship placement from scratch
+using arrays "delta_x" and "delta_y" to define the horizontal and vertical step
+for each directions and could then just use the same code to place ships in any
+direction. It took all of ten minutes to make the ship placement for any
+direction work in this manner, but I tweaked it to place the larger ships first
+to reduce the odds of the board setup hanging, unable to place the last ship.
+
+The actual gameplay was fairly simple and pretty much Just Worked.
+I updated the "splash/hit" ratio to display the congratulatory message
+on 0 splashes at the end of the game, rather than when splashes divided
+by hits equals zero. In practice this is the same thing, but avoids comparisons
+against a floating point division, which avoids potential rounding errors
+(and saves us from dividing when counting does the trick).

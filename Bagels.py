@@ -12,7 +12,7 @@ def title():
     """
     *** BAGLES NUMBER GUESSING GAME
     *** ORIGINAL SOURCE UNKNOWN BUT SUSPECTED TO BE
-    *** LAWRENCE HALL OF SCIENCE, U.C. BERKELY    
+    *** LAWRENCE HALL OF SCIENCE, U.C. BERKELY
     """
 
 
@@ -69,7 +69,7 @@ while True:
 
             try:
                 intguess = int(guess)
-            except TypeError:
+            except TypeError, ValueError:
                 intguess = -1
 
             if intguess < 1:
