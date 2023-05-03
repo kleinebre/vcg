@@ -27,12 +27,19 @@ def main():
         v = 5.0 + int(35.0 * random())
         print(f"A BALL IS THROWN UPWARDS AT {v} METERS PER SECOND.")
         print()
-        a = 0.05 * v**2.0
+
+        a = 0.05 * v**2.0  # v0 squared, divided by 2G
         correct += check_answer(a, "HOW HIGH WILL IT GO (IN METERS)? ")
-        a = v / 5.0
+
+        a = v / 5.0  # 2 times v0 divided by G
         correct += check_answer(a, "HOW LONG UNTIL IT RETURNS (IN SECONDS)? ")
+
         t = 1.0 + int(2.0 * v * random()) / 10.0
-        a = v - 10.0 * t
+        a = v - 10.0 * t   # v minus GT. Note that the value t here
+                           # may be greater than amount of seconds until
+                           # the ball returns.
+                           # This means it may reach negative heights -
+                           # I deduce we are standing on top of a cliff.
         correct += check_answer(a, f"WHAT WILL ITS VELOCITY BE AFTER {t} SECONDS? ")
         print()
         print(correct, "RIGHT OUT OF 3.")
