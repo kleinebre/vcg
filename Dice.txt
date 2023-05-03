@@ -1,0 +1,13 @@
+Dice simulates dice rolls of two dice.
+LOTS of dice rolls of two dice.
+
+It then proceeds to print statistics of the results.
+Perhaps not particularly useful if you were hoping
+for a simulated pair of dice to play Monopoly, but
+it does serve as a nice illustration that the number
+7 is favoured in rolls of two dice.
+
+A charming note in the program is that large numbers
+of rolls ("In particular, numbers over 5000") take a
+long time. Since this program was originally written,
+computer hardware has come a very long way, indeed.

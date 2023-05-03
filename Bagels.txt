@@ -1,0 +1,11 @@
+Bagels is a number guessing game much in the spirit of
+mastermind.
+
+To check the amount of unique digits, I've opted
+to use a Python set which I felt was a bit cleaner
+implementation than used in the original.
+
+Nothing major to report here otherwise; The rules
+explain what the program does, the code was in reasonable
+shape and the program wasn't particularly big so porting
+this wasn't too fussy.

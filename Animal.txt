@@ -1,0 +1,24 @@
+Animal was an early expert system. It would
+ask you to think of an animal, and it would
+then ask yes/no questions to traverse down
+a binary tree in an attempt to guess the animal.
+If you had thought of an animal not known to
+the system, it would ask you about the distinction
+between that animal and the last-guessed animal
+and create a new entry in the binary tree.
+
+I thought there were two interesting sides to
+this implementation. The first was that it could
+actually improve its knowledge. The second was
+that the original author managed a binary tree
+implementation in a language in which support
+for data structures was pretty much non-existent.
+
+In its day, due to its ability to extend its
+knowledge, this program might have been thought
+of as a precursor to artificial intelligence.
+
+These days, there are childrens' toys that run a
+similar guessing game, be it about animals or
+your favourite character from some movie
+franchise's universe.

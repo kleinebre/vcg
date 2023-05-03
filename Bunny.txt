@@ -1,0 +1,39 @@
+The Bunny program prints a text-based bunny on the screen.
+Probably the most remarkable thing about this is how
+efficiently the image is stored.
+
+The secret is in the data format, which uses run length
+encoding; if the image would require printing 10 spaces
+and 5 non-spaces, it would simply state 10,5.
+
+In this manner, the data contains pairs of numbers
+indicating the amount of spaces to print, followed
+by the amount of non-whitespace characters to print.
+
+Two special situations further control the behaviour.
+If the given amount of spaces to print is negative,
+this indicates the end of the line and the next number
+will be a number of spaces again.
+If the given amount of spaces to print is greater than
+128, then we have reached the end of the image.
+
+This appears to comes with some limitations: it would
+seem we can never print more than 128 consecutive
+spaces. In practice, this is not an issue, for two
+reasons. The first reason is that in the image being
+printed, this simply doesn't occur. The second reason
+is that we can work around it by stating that we want
+to print zero non-whitespace characters, after which
+we can print more whitespace.
+
+A slight improvement to the data format would
+be to use a negative number for the "end of
+image" case rather than any number greater than 128.
+This would have firmly separated "special case
+commands" (negative numbers) from lengths (all
+numbers greater than or equal to zero), lifting
+the upper limit for the maximum length contained by
+any single number. However, for the given image, which
+stays within the screen's width limits, this would be
+of little benefit, so I've kept this port true to the
+original.

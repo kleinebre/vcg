@@ -1,0 +1,29 @@
+Diamond prints a pretty diamond pattern on screen.
+
+The tricky bit in porting this was realising the
+somewhat strange way the FOR loop was being used;
+
+For the top half of the diamond,
+
+10 X=1:Y=R:Z=2
+20 FOR N=X TO Y STEP Z
+
+And later, for the bottom half of the diamond,
+
+85 X=R-2:Y=1:Z=-2
+90 GOTO 20
+
+It became clear that this basically used a single
+written FOR loop to execute two completely different
+loop behaviours - first to increase the width of the
+diamond, then to shrink it back. I replaced the FOR
+loop with a WHILE, toggling between a positive "delta"
+variable to grow the diamond and a negative "delta"
+to shrink it again. As was the case with the BASIC
+code, this effectively splits the pattern generation
+into a top half and a bottom half.
+
+A further strategy used here and in several other ports,
+is to generate one line of output at a time and print
+it only when fully generated - this avoids tab width
+issues.

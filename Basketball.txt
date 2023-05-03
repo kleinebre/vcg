@@ -1,0 +1,70 @@
+Basketball
+
+A sports simulation, which has evolved into a genre
+involves quite the powerhouse of eye-catching graphics,
+physics simulations and team dynamics.
+
+This is not that powerhouse, and I won't beat around
+the bush - the original listing was quite a tangled
+mess of spaghetti code, and it wouldn't surprise me
+too much if I heard that it had single-handedly driven
+Dijkstra to write his most famous paper.
+
+But, it was apparently a working piece of code. Sort of.
+And it did give me some further insights on how to
+turn unstructured code into more structured code.
+
+I started by removing all unused line numbers to get
+visibility of which ones were actually in use as GOTO
+destinations.
+
+From there on, a cornerstone of the porting approach was
+to replace GOTO statements targeting code containing further
+GOTO statements with GOSUB statements followed by GOTO
+statements. The original code target could then be turned into
+a subroutine. For instance,
+
+10 GOTO 50
+20 PRINT "HI"
+   PRINT "THAT WAS ALL"
+   END
+50 PRINT "THIS PRINTS SOMETHING AND THEN JUMPS AGAIN"
+   GOTO 20
+
+Since the block at line 50 would later "GOTO 20", I would replace it with
+"GOSUB 50: GOTO 20" like so:
+
+10 GOSUB 50: GOTO 20
+20 PRINT "HI"
+   PRINT "THAT WAS ALL"
+   END
+50 PRINT "THIS PRINTS SOMETHING AND THEN JUMPS AGAIN"
+   RETURN
+
+Subsequently, unnecessary GOTOs could be removed.
+
+10 GOSUB 50
+20 PRINT "HI"
+   PRINT "THAT WAS ALL"
+   END
+50 PRINT "THIS PRINTS SOMETHING AND THEN JUMPS AGAIN"
+   RETURN
+
+And without unused line numbers, we'd end up with
+
+   GOSUB 50
+   PRINT "HI"
+   PRINT "THAT WAS ALL"
+   END
+50 PRINT "THIS PRINTS SOMETHING AND THEN JUMPS AGAIN"
+   RETURN
+
+which would then be a lot closer to our final Python code.
+Not the cleanest Python code of course; Randomly GOTOing
+all over the place causes the concept of scope to break
+down, which means most variables end up behaving as globals.
+As a result, the functions in the final Python listing
+have quite lengthy parameter lists.
+
+The game itself is mostly random, the player does not
+actually have all that much control over the outcome.

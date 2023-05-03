@@ -1,0 +1,22 @@
+Kinema is an early piece of educational software.
+It generates one type of Newtonian physics exercise
+and asks the user to solve it, then provides
+feedback about the answer. While this is a far cry
+from the gamified, colourful educational software
+of the present, it can be a useful training tool.
+
+It should be noted that the answers given by this
+tool are actually slightly off, since the gravity
+constant is taken to be 10 meters per second per
+second rather than 9.8, so the result will be less
+close to reality and more of a ballpark figure.
+The program compensates for this by allowing
+answers to be anywhere within 15% of the answer
+that is deemed to be correct. It would not have
+been a bad idea to define the gravity constant as
+G in the program, allowing it not only to be
+tuned to the actual physics in effect on Earth,
+but also other planets.
+
+In the spirit of educational software, I've left
+this as an exercise for the reader.

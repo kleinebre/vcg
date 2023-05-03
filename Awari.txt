@@ -1,0 +1,16 @@
+The game "awari" is one of the oldest games in the world,
+and it is known by many other names - Kala, Bantumi, and
+so on. It's a game of sharing around small objects (rocks,
+sea shells, beans, marbles) across a game board which consists
+of two lines of indentations, one line on each player's
+side. If you're ever on the beach, you'll have everything
+at hand to build your own live version of this game.
+
+This version comes with a computer opponent. It basically
+tries every possible move, and then chooses the one
+yielding the largest amount of beans.
+
+One thing I like about this game is the life lesson that's
+hidden in there: Counter-intuitively, one of the most
+effective winning strategies is to "give away" as many beans
+to the other side as possible.

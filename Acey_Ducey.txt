@@ -1,0 +1,11 @@
+Acey Ducey is a card game, a game genre that has
+seen popularity amongst computer games since the
+early days of computing. Conceptually, most of
+these games tend to be fairly simple, and a
+great many operations and functions used by one
+game could be reused in another - be it picking
+a card, generating card names, shuffling the
+dec and so on. Unsurprisingly, card games have
+made their way to desktop computing (solitaire)
+and online gambling sites.
+

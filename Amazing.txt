@@ -1,0 +1,9 @@
+Amazing is a maze generator. It was a bit of a challenge
+to port due to some code structure issues; it took me
+more time and effort to port this one than it previously
+took to write a maze generator from scratch. However, it
+was interesting to see how one might go about generating
+a maze without recursion, and this maze generator manages
+to do just that.
+
+

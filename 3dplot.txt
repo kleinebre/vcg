@@ -1,0 +1,17 @@
+3D plot
+
+
+This prints a three dimensional plot to the
+standard output device, in plain text mode.
+
+The cool thing about this plot is that it does
+"hidden lines". The small size of this program
+made it easy to port. One important difference
+between the original version of the program
+and the port is that the port generates the
+full line in memory before printing it, rather
+than trying to do tab-based printing. This is
+a technique carried over to several of the
+other ports.
+
+

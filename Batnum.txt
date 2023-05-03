@@ -1,0 +1,14 @@
+Nana nana nana nana BatNum!
+
+It's the BATtle of NUMbers.
+
+There are a few implementations of similar games out
+there - you get a pile of matches or whatever, and
+the object of the game is to take the last one - or
+not. The nice thing about this implementation is
+that you can define the starting size of the pile,
+the minimum and maximum amount of items one should
+take from the pile, and whether the last one taken
+counts as a win or a loss. This means that it can
+handle pretty much any variation of the game out
+there.

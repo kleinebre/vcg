@@ -1,0 +1,14 @@
+The program "Eliza" could be considered one of the first chat bots.
+It couldn't possibly pass the turing test, as it has only a small
+amount of pre-programmed answers and a very rudimentary understanding
+of grammar indeed.
+
+The version given here is somewhat of a free-form port, doing away
+with the numeric "data for finding the right replies" data block at
+the end of the program, and instead making use of the more flexible
+data structures that Python has to offer.
+
+Fast forward a few decades and we have ChatGPT, which is mindbogglingly
+far removed from the naive algorithmic approach used by Eliza. But
+still, one can't help wonder - if it weren't for Eliza, would ChatGPT
+exit at all?

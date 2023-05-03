@@ -1,0 +1,38 @@
+"king" is a governing style game.
+
+The player is given an objective, and several internal
+rules of the game remain mostly hidden to the player,
+so the behaviour of the game can be unpredictable.
+
+Sim City is an example of a more recent game based on
+the same basic concept.
+
+Porting this game posed no big challenges;
+it was one of the more well-structured games in the
+book. As such, the game proved relatively easy to port
+and easy to read once variable names were chosen.
+I did spot a few bugs in the original.
+
+- On line 1105 in the original listing, the code
+  jumps to "over a third of the population died"
+  when over 50 people starve. Given the population
+  starts at around 500, that's 10% so this made no
+  sense. I've changed this to jump to said message
+  when over 50% of the population dies, which is
+  indeed also "over a third of the population".
+
+- Some comparisons are made against variable T1.
+  However T1 is never set, so it is always 0.
+  Apparently this is used to print a message on
+  reasons for declining crop yields, similar to
+  the reason for declined tourist trade income - 
+  but otherwise it is otherwise inconsequential,
+  so I have removed it altogether.
+
+- On line 1450, we have V3=INT(A+V3) which is used
+  in the next year to compare tourist trade income.
+  That means that for the current year, it should
+  be set to the current year's tourist trade income,
+  rather than "current money + last year's tourist
+  trade income".
+
