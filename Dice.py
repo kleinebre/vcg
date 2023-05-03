@@ -5,7 +5,7 @@ from random import random as rnd
 
 
 def title():
-    print((33 * " ") + "Number")
+    print((33 * " ") + "Dice")
     print((15 * " ") + "Creative Computing  Morristown, New Jersey")
     print((15 * " ") + "Python version by Marc Brevoort")
     print("")
