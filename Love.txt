@@ -1,0 +1,25 @@
+Like Bunny, Love is another program that draws a piece
+of ASCII art using alternating "blank" and "nonblank"
+characters, with the graphic embedded in a run length
+encoded data block. A main difference between Bunny
+and this program is that the former has variable line
+lengths, while the latter has fixed line lengths,
+which means "blank" and "nonblank" stretches can
+wrap to the next line. This means there's no need
+to define special values as the end of the line,
+making this program just a bit tidier than its
+counterpart, which also made it just that bit easier
+to tweak.
+
+So rather than having a hard-coded line length value
+like on line 400 of the original BASIC listing, in
+this port I've taken the liberty of adding the
+line length before the data block, which gives a bit
+more flexibility should you wish to define your own
+graphic. I've also defined a few printing styles
+for you to try out. The default mirrors the original
+program; style number 2 uses a combination of row+
+column to decide what letter to print, and style
+number 3 will ignore what position we're on and just
+repeatedly print the whole message around the spaces,
+which is particularly appealing for long messages.
